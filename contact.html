@@ -8,36 +8,59 @@
   </head>
   <body style="background-color:#8AAAE5;color:#FFFFFF;">
     <navbar-component></navbar-component>
-    <h1 class="text-center">Contact Us</h1>
-    <div class="container my-3 bg-dark text-light p-5 shadow">
-      <form action="">
+    <h1 class="text-center m-3">Contact Us</h1>
+    <div class="container my-3 text-light">
+      <form action="" class="w-75 mx-auto bg-dark p-3 shadow">
         <div class="mb-3">
           <label for="email" class="form-label">Email address</label>
           <input type="email" class="form-control" id="email" placeholder="name@example.com">
         </div>
         <div class="mb-3">
           <p>Subject</p>
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-        <label class="form-check-label" for="flexRadioDefault1">
-          Feedback
-        </label>
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Business
-        </label>
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Enquiry
-        </label>
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Complaint
-        </label>
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Other
-        </label>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 mb-2">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Feedback
+                </label>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-2">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Business
+                </label>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-2">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                  Enquiry
+                </label>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-2">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                  Complaint
+                </label>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-2">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+                <label class="form-check-label" for="flexRadioDefault5">
+                  Other
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
+        
         <div class="mb-3">
           <label for="message" class="form-label">Message</label>
           <textarea class="form-control" id="message" rows="3"></textarea>

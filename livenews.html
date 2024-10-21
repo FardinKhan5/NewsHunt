@@ -19,7 +19,7 @@
     <navbar-component></navbar-component>
     <h1 class="text-center">Live News</h1>
     <div class="container">
-      <div class="row row-cols-2" id="channelsBox"></div>
+      <div class="row row-cols-1 row-cols-lg-2 row-cols-md-1 row-cols-sm-1" id="channelsBox"></div>
     </div>
     </div>
 
@@ -53,7 +53,7 @@
       let videoHTML = '';
       channels.forEach((channel) => {
         videoHTML += `
-        <div class="col mb-4 p-2">
+        <div class="col mb-4 p-2 d-flex flex-column align-items-center">
           <h3>${channel.name}</h3>
           <video
             id="${channel.id}" 
