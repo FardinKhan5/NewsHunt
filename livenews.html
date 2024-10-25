@@ -19,7 +19,7 @@
     <navbar-component></navbar-component>
     <h1 class="text-center">Live News</h1>
     <div class="container">
-      <div class="row row-cols-1 row-cols-lg-2 row-cols-md-1 row-cols-sm-1" id="channelsBox"></div>
+      <div class="row row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1" id="channelsBox"></div>
     </div>
     </div>
 
@@ -42,8 +42,33 @@
         },
         {
           id:"channel4",
+          name: "NDTV India",
+          url:"https://ndtvindiaelemarchana.akamaized.net/hls/live/2003679/ndtvindia/master.m3u8"
+        },
+        {
+          id:"channel5",
+          name: "CNN News 18",
+          url:"https://n18syndication.akamaized.net/bpk-tv/CNN_News18_NW18_MOB/output01/index.m3u8"
+        },
+        {
+          id:"channel6",
+          name: "DD News",
+          url:"https://hls.media.nic.in/hls/live/ddnews/ddnews.m3u8"
+        },
+        {
+          id:"channel7",
           name: "Al Jazeera",
           url: "https://live-hls-v3-aje.getaj.net/AJE-V3/index.m3u8",
+        },
+        {
+          id:"channel8",
+          name: "BBC News",
+          url: "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8",
+        },
+        {
+          id:"channel9",
+          name: "CNBC",
+          url: "http://fl2.moveonjoy.com/CNBC/index.m3u8",
         },
       ];
 
@@ -54,17 +79,19 @@
       channels.forEach((channel) => {
         videoHTML += `
         <div class="col mb-4 p-2 d-flex flex-column align-items-center">
-          <h3>${channel.name}</h3>
+          <div class="bg-dark shadow-lg p-2">
+            <h5>${channel.name}</h5>
           <video
             id="${channel.id}" 
             class="video-js vjs-default-skin"
             controls
             preload="auto"
-            width="400"
-            height="360"
+            width="260"
+            height="140"
             data-setup='{}'>
             <source src="${channel.url}" type="application/x-mpegURL">
           </video>
+          </div>
         </div>
         `;
       });

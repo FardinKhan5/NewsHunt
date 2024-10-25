@@ -38,6 +38,8 @@ class Navbar extends HTMLElement{
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item"
+                                        href="/" id="business">General</a></li>
+                                <li><a class="dropdown-item"
                                         href="/?category=business" id="business">Business</a></li>
                                 <li><a class="dropdown-item"
                                         href="/?category=health" id="health">Health</a></li>
