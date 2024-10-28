@@ -48,13 +48,15 @@ const fetchNews = async (category) => {
             if(article.title!="[Removed]"){
                 newsBox.innerHTML += `
                 <div class="col mb-3 newsCard">
-                    <div class="card shadow-sm" style="height:100%;" >
+                    <div class="card rounded-xl shadow-sm" style="height:100%;" >
                         <img src=${article.urlToImage !=null  ? article.urlToImage :"https://plus.unsplash.com/premium_photo-1707080369554-359143c6aa0b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} class="card-img-top" alt="img">
-                        <div class="card-body ">
-                            <h5 class="card-title">${article.title}</h5>
-                            <p class="card-text text-sm">${article.description?article.description:""}</p>
+                          <span class="position-absolute top-0 start-0 badge  bg-danger">
+                          ${article.source.name} </span>
+                        <div class="card-body rounded-xl">
+                            <h5 class="card-title">${article.title?article.title:"Unknown"}</h5>
+                            <p class="card-text text-sm">${article.description?article.description:"Description is not availabe"}</p>
                         </div>
-                            <a href="${article.url}" target="_blank" class="btn rounded-0 btn-danger" id="readmore">Read More</a>
+                            <a href="${article.url}" target="_blank" class="btn rounded-bottom-xl rounded-top-0 btn-danger" id="readmore">Read More</a>
                     </div>
                 </div>
             `;
@@ -65,7 +67,6 @@ const fetchNews = async (category) => {
             for(let i=0;i<cards.length;i++){
                 // console.log(cards[i])
                 cards[i].addEventListener("mouseover",(e)=>{
-                    console.log("hover")
                     cards[i].classList.add("shadow-lg","translate-slightly-up")
                 })
                 cards[i].addEventListener("mouseout", () => {
