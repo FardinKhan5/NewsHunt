@@ -5,10 +5,9 @@ const newsApiKey = "d7d0f279dca045a1a006ae71c1c68a00";
 const fetchNews = async (category) => {
     try {
         document.getElementById("headline").innerText=`Top Headlines-${category.charAt(0).toUpperCase() + category.substr(1)}`
-        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${newsApiKey}`
-        const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`// for github
+        // const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${newsApiKey}` //newsApi url
+        const url=`https://gnews.io/api/v4/top-headlines?category=${category}&country=in&lang=hi&apikey=d566d315683b880354cff064e3711731` //Gnews Api url
         console.log("url",url)
-        // console.log("proxy url",proxyUrl);
         const newsBox = document.querySelector("#newsBox");
         for(let i=0;i<6;i++){
             newsBox.innerHTML+=`
@@ -49,7 +48,7 @@ const fetchNews = async (category) => {
                 newsBox.innerHTML += `
                 <div class="col mb-3 newsCard">
                     <div class="card rounded-xl shadow-sm" style="height:100%;" >
-                        <img src=${article.urlToImage !=null  ? article.urlToImage :"https://plus.unsplash.com/premium_photo-1707080369554-359143c6aa0b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} class="card-img-top" alt="img">
+                        <img src=${article.image !=null  ? article.image :"https://plus.unsplash.com/premium_photo-1707080369554-359143c6aa0b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} class="card-img-top" alt="img">
                           <span class="position-absolute top-0 start-0 badge  bg-danger">
                           ${article.source.name} </span>
                         <div class="card-body rounded-xl">
@@ -81,7 +80,7 @@ const fetchNews = async (category) => {
 
 const params = new URLSearchParams(window.location.search);
 if(window.location.pathname==="/" && (!params.get("category"))){
-    fetchNews("general")
+    fetchNews("world")
 }else{
     switch (params.get('category')) {
         case "business":
@@ -102,7 +101,14 @@ if(window.location.pathname==="/" && (!params.get("category"))){
         case "technology":
             fetchNews("technology");
             break;
+        case "nation":
+            fetchNews("nation");
+            break;
+        case "general":
+            fetchNews("general");
+            break;
     }
 }
+
 
 

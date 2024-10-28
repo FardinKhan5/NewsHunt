@@ -18,17 +18,17 @@ class Navbar extends HTMLElement{
                     id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"
+                            <a class="nav-link ${window.location.pathname==="/"?"active ":""}" aria-current="page"
                                 href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link ${window.location.pathname==="/about.html"?"active":""}" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link ${window.location.pathname==="/contact.html"?"active":""} " href="contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="livenews.html">Live News</a>
+                            <a class="nav-link ${window.location.pathname==="/livenews.html"?"active":""}" href="livenews.html">Live News</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#"
@@ -38,7 +38,11 @@ class Navbar extends HTMLElement{
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item"
-                                        href="/" id="business">General</a></li>
+                                        href="/?category=general" id="general">General</a></li>
+                                <li><a class="dropdown-item"
+                                        href="/" id="world">World</a></li>
+                                <li><a class="dropdown-item"
+                                        href="/?category=nation" id="nation">Nation</a></li>
                                 <li><a class="dropdown-item"
                                         href="/?category=business" id="business">Business</a></li>
                                 <li><a class="dropdown-item"
