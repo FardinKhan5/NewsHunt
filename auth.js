@@ -37,7 +37,7 @@ document.getElementById("logout")?.addEventListener("click",async (e)=>{
   try {
     await account.deleteSession('current')
     localStorage.removeItem('userData');
-    window.location.href="/login.html"
+    window.location.href="/NewsHunt/login.html"
   } catch (error) {
     alert("Logout Failed")
   }
@@ -64,7 +64,7 @@ function signup(name, email, password, country, language) {
         expires: Date.now() + 7 * 24 * 60 * 60 * 1000 // Set expiration time for 7 days
       };
       localStorage.setItem('userData', JSON.stringify(userData));
-      window.location.href="/"
+      window.location.href="/NewsHunt/"
     })
     .catch(error => {
       // If any error occurs, delete the created user
@@ -96,7 +96,7 @@ function login(email, password) {
             expires: Date.now() + 7 * 24 * 60 * 60 * 1000 // Set expiration time for 7 days
           };
           localStorage.setItem('userData', JSON.stringify(userData));
-          window.location.href = "/";
+          window.location.href = "/NewsHunt/";
         });
     })
     .catch(error => {
