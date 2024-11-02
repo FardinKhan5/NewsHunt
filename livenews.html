@@ -18,7 +18,7 @@
       const storedUserData = JSON.parse(localStorage.getItem('userData'));
       if (!storedUserData || Date.now() > storedUserData.expires) {
           localStorage.removeItem('userData');
-          window.location.href = "/signup.html"
+          window.location.href = "/NewsHunt/signup.html"
       }
   </script>
   </head>
