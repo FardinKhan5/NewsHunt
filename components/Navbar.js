@@ -6,7 +6,7 @@ class Navbar extends HTMLElement{
         this.innerHTML=`
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/">NewsHunt</a>
+                <a class="navbar-brand" href="/NewsHunt/">NewsHunt</a>
                 <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
@@ -18,17 +18,17 @@ class Navbar extends HTMLElement{
                     id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link ${window.location.pathname==="/"?"active ":""}" aria-current="page"
-                                href="/">Home</a>
+                            <a class="nav-link ${window.location.pathname==="/NewsHunt/"?"active ":""}" aria-current="page"
+                                href="/NewsHunt/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link ${window.location.pathname==="/about.html"?"active":""}" href="about.html">About</a>
+                            <a class="nav-link ${window.location.pathname==="/NewsHunt/about.html"?"active":""}" href="/NewsHunt/about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link ${window.location.pathname==="/contact.html"?"active":""} " href="contact.html">Contact</a>
+                            <a class="nav-link ${window.location.pathname==="/NewsHunt/contact.html"?"active":""} " href="/NewsHunt/contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link ${window.location.pathname==="/livenews.html"?"active":""}" href="livenews.html">Live News</a>
+                            <a class="nav-link ${window.location.pathname==="/NewsHunt/livenews.html"?"active":""}" href="/NewsHunt/livenews.html">Live News</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#"
@@ -38,23 +38,23 @@ class Navbar extends HTMLElement{
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item"
-                                        href="/?category=general" id="general">General</a></li>
+                                        href="/NewsHunt/?category=general" id="general">General</a></li>
                                 <li><a class="dropdown-item"
-                                        href="/" id="world">World</a></li>
+                                        href="/NewsHunt/" id="world">World</a></li>
                                 <li><a class="dropdown-item"
-                                        href="/?category=nation" id="nation">Nation</a></li>
+                                        href="/NewsHunt/?category=nation" id="nation">Nation</a></li>
                                 <li><a class="dropdown-item"
-                                        href="/?category=business" id="business">Business</a></li>
+                                        href="/NewsHunt/?category=business" id="business">Business</a></li>
                                 <li><a class="dropdown-item"
-                                        href="/?category=health" id="health">Health</a></li>
+                                        href="/NewsHunt/?category=health" id="health">Health</a></li>
                                 <li><a class="dropdown-item"
-                                        href="/?category=science" id="science">Science</a></li>
+                                        href="/NewsHunt/?category=science" id="science">Science</a></li>
                                 <li><a class="dropdown-item"
-                                        href="/?category=entertainment" id="entertainment">Entertainment</a></li>
+                                        href="/NewsHunt/?category=entertainment" id="entertainment">Entertainment</a></li>
                                 <li><a class="dropdown-item"
-                                        href="/?category=sports" id="sports">Sports</a></li>
+                                        href="/NewsHunt/?category=sports" id="sports">Sports</a></li>
                                 <li><a class="dropdown-item"
-                                        href="/?category=technology" id="technology">Technology</a></li>
+                                        href="/NewsHunt/?category=technology" id="technology">Technology</a></li>
                             </ul>
                         </li>
                     </ul>
