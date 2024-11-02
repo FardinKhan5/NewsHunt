@@ -1,12 +1,9 @@
-const newsApiKey = "d7d0f279dca045a1a006ae71c1c68a00";
-
-
-
+const userData=JSON.parse(localStorage.getItem("userData"))
 const fetchNews = async (category) => {
     try {
         document.getElementById("headline").innerText=`Top Headlines-${category.charAt(0).toUpperCase() + category.substr(1)}`
-        // const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${newsApiKey}` //newsApi url
-        const url=`https://gnews.io/api/v4/top-headlines?category=${category}&country=in&lang=hi&apikey=d566d315683b880354cff064e3711731` //Gnews Api url
+        // const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=d7d0f279dca045a1a006ae71c1c68a00` //newsApi url
+        const url=`https://gnews.io/api/v4/top-headlines?category=${category}&country=${userData.country}&lang=${userData.language}&apikey=d566d315683b880354cff064e3711731` //Gnews Api url
         console.log("url",url)
         const newsBox = document.querySelector("#newsBox");
         for(let i=0;i<6;i++){

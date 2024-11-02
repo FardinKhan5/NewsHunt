@@ -58,7 +58,7 @@ class Navbar extends HTMLElement{
                             </ul>
                         </li>
                     </ul>
-
+                    <button class="btn btn-outline-danger" id="logout">Logout</button>
                 </div>
             </div>
         </nav>
