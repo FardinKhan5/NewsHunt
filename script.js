@@ -76,7 +76,7 @@ const fetchNews = async (category) => {
 
 
 const params = new URLSearchParams(window.location.search);
-if(window.location.pathname==="/" && (!params.get("category"))){
+if(window.location.pathname==="/NewsHunt/" && (!params.get("category"))){
     fetchNews("world")
 }else{
     switch (params.get('category')) {
